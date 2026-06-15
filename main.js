@@ -435,11 +435,24 @@ shareButton.addEventListener('click', () => {
 
 #サヨキバード`;
 
-  const shareUrl =
+  const webUrl =
     `https://x.com/intent/post?text=${encodeURIComponent(text)}` +
     `&url=${encodeURIComponent(GAME_URL)}`;
 
-  window.open(shareUrl, '_blank', 'noopener,noreferrer');
+  const appUrl =
+    `twitter://post?message=${encodeURIComponent(`${text}\n\n${GAME_URL}`)}`;
+
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    location.href = appUrl;
+
+    setTimeout(() => {
+      window.open(webUrl, '_blank', 'noopener,noreferrer');
+    }, 900);
+  } else {
+    window.open(webUrl, '_blank', 'noopener,noreferrer');
+  }
 });
 
 document.addEventListener('keydown', e => {
