@@ -25,7 +25,7 @@ const DEADLINE_Y = 120;
 const DROP_Y = 78;
 const STORAGE_KEY = 'sayokiBirdDropHighScore';
 const MUTE_KEY = 'sayokiBirdDropMuted';
-const GAME_URL = 'https://rekrum.github.io/sayoki-bird-drop/';
+const GAME_URL = 'https://rekrum.github.io/sayoki_bird_drop/';
 
 const LEVELS = [
   { name: 'あおサヨキ', color: 'blue', radius: 28, score: 10, img: 'assets/sayoki_blue.png' },
@@ -427,7 +427,7 @@ pauseButton.addEventListener('click', () => togglePause());
 muteButton.addEventListener('click', toggleMute);
 shareButton.addEventListener('click', () => {
   const text =
-`SAYOKI BIRD DROPで${score.toLocaleString()}点を取りました！
+`SAYOKI BIRD DROPで ${score.toLocaleString()}点 を取りました！
 
 レインボーサヨキを目指せ！
 
