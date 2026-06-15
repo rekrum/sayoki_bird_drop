@@ -1,4 +1,11 @@
 * { box-sizing: border-box; }
+html,
+body,
+canvas,
+button,
+.game-wrap {
+  -webkit-tap-highlight-color: transparent;
+}
 body {
   margin: 0;
   min-height: 100vh;
@@ -15,6 +22,7 @@ body::before {
   background: rgba(255,255,255,.22);
   pointer-events: none;
 }
+
 .game-shell { position: relative; width: min(96vw, 720px); padding: 14px; }
 .top-panel, .info-panel {
   display: flex;
@@ -48,7 +56,15 @@ h1 { margin: 0; font-size: clamp(26px, 7vw, 42px); line-height: 1; color: #16466
   max-width: 560px;
   margin: 0 auto;
 }
-canvas { display: block; width: 100%; height: auto; touch-action: none; cursor: pointer; }
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
 .overlay {
   position: absolute;
   inset: 0;
@@ -76,7 +92,24 @@ button {
   background: #fff163;
   box-shadow: 0 6px 0 #d3a431;
 }
-button:active { transform: translateY(4px); box-shadow: 0 2px 0 #d3a431; }
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 13px 30px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  color: #17476e;
+  background: #fff163;
+  box-shadow: 0 6px 0 #d3a431;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+button:focus {
+  outline: none;
+}
 .sub-button { background: #dff9ff; box-shadow: 0 6px 0 #76bdd2; }
 .button-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 .record-text { min-height: 1.5em; color: #fff163; font-weight: 900; }
