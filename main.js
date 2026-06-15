@@ -28,14 +28,14 @@ const MUTE_KEY = 'sayokiBirdDropMuted';
 const GAME_URL = 'https://rekrum.github.io/sayoki-bird-drop/';
 
 const LEVELS = [
-  { name: 'あおサヨキ', color: 'blue', radius: 26, score: 10, img: 'assets/sayoki_blue.png' },
-  { name: 'あかサヨキ', color: 'red', radius: 32, score: 30, img: 'assets/sayoki_red.png' },
-  { name: 'みどりサヨキ', color: 'green', radius: 40, score: 70, img: 'assets/sayoki_green.png' },
-  { name: 'きいろサヨキ', color: 'yellow', radius: 52, score: 150, img: 'assets/sayoki_yellow.png' },
-  { name: 'オレンジサヨキ', color: 'orange', radius: 68, score: 320, img: 'assets/sayoki_orange.png' },
-  { name: 'ピンクサヨキ', color: 'pink', radius: 88, score: 680, img: 'assets/sayoki_pink.png' },
-  { name: 'むらさきサヨキ', color: 'purple', radius: 112, score: 1450, img: 'assets/sayoki_purple.png' },
-  { name: 'レインボーサヨキ', color: 'rainbow', radius: 140, score: 3200, img: 'assets/sayoki_rainbow.png' }
+  { name: 'あおサヨキ', color: 'blue', radius: 28, score: 10, img: 'assets/sayoki_blue.png' },
+  { name: 'あかサヨキ', color: 'red', radius: 38, score: 30, img: 'assets/sayoki_red.png' },
+  { name: 'みどりサヨキ', color: 'green', radius: 52, score: 70, img: 'assets/sayoki_green.png' },
+  { name: 'きいろサヨキ', color: 'yellow', radius: 70, score: 150, img: 'assets/sayoki_yellow.png' },
+  { name: 'オレンジサヨキ', color: 'orange', radius: 92, score: 320, img: 'assets/sayoki_orange.png' },
+  { name: 'ピンクサヨキ', color: 'pink', radius: 118, score: 680, img: 'assets/sayoki_pink.png' },
+  { name: 'むらさきサヨキ', color: 'purple', radius: 148, score: 1450, img: 'assets/sayoki_purple.png' },
+  { name: 'レインボーサヨキ', color: 'rainbow', radius: 184, score: 10000, img: 'assets/sayoki_rainbow.png' }
 ];
 
 const images = {};
