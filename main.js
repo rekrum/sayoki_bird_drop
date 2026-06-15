@@ -28,14 +28,14 @@ const MUTE_KEY = 'sayokiBirdDropMuted';
 const GAME_URL = 'https://rekrum.github.io/sayoki-bird-drop/';
 
 const LEVELS = [
-  { name: 'あおサヨキ', color: 'blue', radius: 28, score: 10, img: 'assets/sayoki_blue.png' },
-  { name: 'あかサヨキ', color: 'red', radius: 34, score: 30, img: 'assets/sayoki_red.png' },
-  { name: 'みどりサヨキ', color: 'green', radius: 42, score: 70, img: 'assets/sayoki_green.png' },
+  { name: 'あおサヨキ', color: 'blue', radius: 26, score: 10, img: 'assets/sayoki_blue.png' },
+  { name: 'あかサヨキ', color: 'red', radius: 32, score: 30, img: 'assets/sayoki_red.png' },
+  { name: 'みどりサヨキ', color: 'green', radius: 40, score: 70, img: 'assets/sayoki_green.png' },
   { name: 'きいろサヨキ', color: 'yellow', radius: 52, score: 150, img: 'assets/sayoki_yellow.png' },
-  { name: 'オレンジサヨキ', color: 'orange', radius: 64, score: 320, img: 'assets/sayoki_orange.png' },
-  { name: 'ピンクサヨキ', color: 'pink', radius: 78, score: 680, img: 'assets/sayoki_pink.png' },
-  { name: 'むらさきサヨキ', color: 'purple', radius: 94, score: 1450, img: 'assets/sayoki_purple.png' },
-  { name: 'レインボーサヨキ', color: 'rainbow', radius: 112, score: 3200, img: 'assets/sayoki_rainbow.png' }
+  { name: 'オレンジサヨキ', color: 'orange', radius: 68, score: 320, img: 'assets/sayoki_orange.png' },
+  { name: 'ピンクサヨキ', color: 'pink', radius: 88, score: 680, img: 'assets/sayoki_pink.png' },
+  { name: 'むらさきサヨキ', color: 'purple', radius: 112, score: 1450, img: 'assets/sayoki_purple.png' },
+  { name: 'レインボーサヨキ', color: 'rainbow', radius: 140, score: 3200, img: 'assets/sayoki_rainbow.png' }
 ];
 
 const images = {};
@@ -218,8 +218,8 @@ function mergeBirds(a, b) {
   setTimeout(() => {
     if (!engine || gameOver) return;
     const nb = createBird(x, y, next);
-    Body.setVelocity(nb, { x: (Math.random() - 0.5) * 2, y: -2.2 });
-    Body.setAngularVelocity(nb, (Math.random() - 0.5) * 0.12);
+    Body.setVelocity(nb, { x: (Math.random() - 0.5) * 6, y: -4.2 });
+    Body.setAngularVelocity(nb, (Math.random() - 0.5) * 0.25);
   }, 30);
 }
 
