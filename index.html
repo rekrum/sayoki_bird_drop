@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAYOKI BIRD DROP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="top-panel">
+      <div>
+        <p class="eyebrow">Suika-like Physics Puzzle</p>
+        <h1>SAYOKI BIRD DROP</h1>
+      </div>
+      <div class="score-row">
+        <div class="score-card"><span>SCORE</span><strong id="score">0</strong></div>
+        <div class="score-card"><span>HIGH</span><strong id="highScore">0</strong></div>
+      </div>
+    </section>
+
+    <section class="game-wrap">
+      <canvas id="gameCanvas" width="480" height="720"></canvas>
+
+      <div id="titleScreen" class="overlay show title-screen">
+        <h2>SAYOKI BIRD DROP</h2>
+        <p>同じサヨキバードをくっつけて進化！レインボーサヨキを目指そう。</p>
+        <p class="small">マウス・ドラッグで落下地点を調整 / クリック・スペースで落下</p>
+        <button id="startButton">START</button>
+      </div>
+
+      <div id="pauseScreen" class="overlay pause-screen">
+        <h2>PAUSE</h2>
+        <button id="resumeButton">RESUME</button>
+      </div>
+
+      <div id="gameOverScreen" class="overlay gameover-screen">
+        <h2>GAME OVER</h2>
+        <p id="finalScoreText">スコア：0</p>
+        <p id="newRecordText" class="record-text"></p>
+        <div class="button-row">
+          <button id="retryButton">RETRY</button>
+          <button id="shareButton" class="sub-button">Xで共有</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-panel">
+      <div class="next-box">
+        <span>NEXT</span>
+        <img id="nextPreview" src="assets/sayoki_blue.png" alt="next sayoki bird" />
+      </div>
+
+      <div class="evolution-box">
+        <span>EVOLUTION</span>
+        <div id="evolutionList" class="evolution-list"></div>
+      </div>
+
+      <div class="help">
+        <p><b>操作</b>：マウス移動 / ドラッグで位置調整、クリック / スペースで落下</p>
+        <p><b>ルール</b>：同じサヨキバードが触れると進化。ラインを超えたら終了。</p>
+        <div class="controls">
+          <button id="pauseButton" class="mini-button">PAUSE</button>
+          <button id="muteButton" class="mini-button">SOUND ON</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
