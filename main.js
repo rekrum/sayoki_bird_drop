@@ -25,6 +25,7 @@ const DEADLINE_Y = 120;
 const DROP_Y = 78;
 const STORAGE_KEY = 'sayokiBirdDropHighScore';
 const MUTE_KEY = 'sayokiBirdDropMuted';
+const GAME_URL = 'https://rekrum.github.io/sayoki-bird-drop/';
 
 const LEVELS = [
   { name: 'あおサヨキ', color: 'blue', radius: 28, score: 10, img: 'assets/sayoki_blue.png' },
@@ -425,9 +426,20 @@ resumeButton.addEventListener('click', () => togglePause(false));
 pauseButton.addEventListener('click', () => togglePause());
 muteButton.addEventListener('click', toggleMute);
 shareButton.addEventListener('click', () => {
-  const text = `SAYOKI BIRD DROPで${score.toLocaleString()}点を取りました！\nレインボーサヨキを目指せ！\n#サヨキバード`;
-  const url = location.href;
-  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank', 'noopener');
+  const text =
+`SAYOKI BIRD DROPで${score.toLocaleString()}点を取りました！
+
+レインボーサヨキを目指せ！
+
+あなたはどこまで進化できる？
+
+#サヨキバード`;
+
+  const shareUrl =
+    `https://x.com/intent/post?text=${encodeURIComponent(text)}` +
+    `&url=${encodeURIComponent(GAME_URL)}`;
+
+  window.open(shareUrl, '_blank', 'noopener,noreferrer');
 });
 
 document.addEventListener('keydown', e => {
